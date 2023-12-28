@@ -79,6 +79,9 @@
       "steps": [
         {
           "exec": "tsc --build"
+        },
+        {
+          "exec": "tsc && vite build"
         }
       ]
     },
@@ -88,6 +91,15 @@
       "steps": [
         {
           "exec": "ts-node --project tsconfig.dev.json .projenrc.ts"
+        }
+      ]
+    },
+    "dev": {
+      "name": "dev",
+      "description": "Starts the vite application",
+      "steps": [
+        {
+          "exec": "vite"
         }
       ]
     },
@@ -153,6 +165,15 @@
     "pre-compile": {
       "name": "pre-compile",
       "description": "Prepare the project for compilation"
+    },
+    "preview": {
+      "name": "preview",
+      "description": "Preview the vite application",
+      "steps": [
+        {
+          "exec": "vite preview"
+        }
+      ]
     },
     "release": {
       "name": "release",
@@ -224,13 +245,13 @@
       },
       "steps": [
         {
-          "exec": "pnpx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,constructs,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-prettier,eslint,jest,jest-junit,prettier,projen,standard-version,ts-jest,ts-node,typescript"
+          "exec": "pnpx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@types/jest,@types/node,@types/react,@types/react-dom,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,@vitejs/plugin-react-swc,constructs,eslint-config-prettier,eslint-import-resolver-typescript,eslint-plugin-import,eslint-plugin-prettier,eslint,jest,jest-junit,prettier,projen,standard-version,ts-jest,ts-node,typescript,vite,react,react-dom"
         },
         {
           "exec": "pnpm i --no-frozen-lockfile"
         },
         {
-          "exec": "pnpm update @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser constructs eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-prettier eslint jest jest-junit prettier projen standard-version ts-jest ts-node typescript"
+          "exec": "pnpm update @types/jest @types/node @types/react @types/react-dom @typescript-eslint/eslint-plugin @typescript-eslint/parser @vitejs/plugin-react-swc constructs eslint-config-prettier eslint-import-resolver-typescript eslint-plugin-import eslint-plugin-prettier eslint jest jest-junit prettier projen standard-version ts-jest ts-node typescript vite react react-dom"
         },
         {
           "exec": "npx projen"

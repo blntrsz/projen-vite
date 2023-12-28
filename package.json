@@ -6,12 +6,14 @@
     "clobber": "npx projen clobber",
     "compile": "npx projen compile",
     "default": "npx projen default",
+    "dev": "npx projen dev",
     "eject": "npx projen eject",
     "eslint": "npx projen eslint",
     "package": "npx projen package",
     "post-compile": "npx projen post-compile",
     "post-upgrade": "npx projen post-upgrade",
     "pre-compile": "npx projen pre-compile",
+    "preview": "npx projen preview",
     "release": "npx projen release",
     "test": "npx projen test",
     "test:watch": "npx projen test:watch",
@@ -23,8 +25,11 @@
   "devDependencies": {
     "@types/jest": "^29.5.11",
     "@types/node": "^18",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
     "@typescript-eslint/eslint-plugin": "^6",
     "@typescript-eslint/parser": "^6",
+    "@vitejs/plugin-react-swc": "^3.5.0",
     "constructs": "^10.0.0",
     "eslint": "^8",
     "eslint-config-prettier": "^9.1.0",
@@ -38,7 +43,12 @@
     "standard-version": "^9",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "vite": "^5.0.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "pnpm": {},
   "main": "lib/index.js",
