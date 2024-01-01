@@ -81,7 +81,7 @@
           "exec": "tsc --build"
         },
         {
-          "exec": "tsc && vite build"
+          "exec": "vite build"
         }
       ]
     },
